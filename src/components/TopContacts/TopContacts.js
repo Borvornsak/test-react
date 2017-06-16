@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./TopContacts.css";
 import PropTypes from "prop-types";
 
 class TopContacts extends Component {
