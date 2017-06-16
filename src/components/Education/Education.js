@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Education.css";
 import PropTypes from "prop-types";
 
 class Education extends Component {
