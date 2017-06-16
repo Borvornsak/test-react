@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./LetsConnect.css";
 import PropTypes from "prop-types";
 
 class LetsConnect extends Component {
