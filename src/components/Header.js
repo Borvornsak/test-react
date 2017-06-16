@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import TopContacts from "./TopContacts";
-import Data from "../data";
+import PropTypes from "prop-types";
 
 class Header extends Component {
   render() {
-    var bio = Data.bio;
+    var bio = this.props.bio;
     return (
       <div id="header" className="center-content clear-fix">
         <h1 id="name">{bio.name}</h1>
@@ -25,7 +25,7 @@ class Header extends Component {
   }
 }
 
-// Header.PropsType = {
-//   bio: React.PropTypes.object
-// };
+Header.propTypes = {
+  bio: PropTypes.object.isRequired
+};
 export default Header;

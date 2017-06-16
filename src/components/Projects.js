@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Data from "../data";
+import PropTypes from "prop-types";
 
 class Projects extends Component {
   render() {
-    var projects = Data.projects;
+    var projects = this.props.projects;
     return (
       <div id="projects">
         <h2>Projects</h2>
@@ -19,5 +19,9 @@ class Projects extends Component {
     );
   }
 }
+
+Projects.proptyes = {
+  projects: PropTypes.object.isRequired
+};
 
 export default Projects;

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Data from "../data";
+import PropTypes from "prop-types";
 
 class WorkExperience extends Component {
   render() {
-    var work = Data.work;
+    var work = this.props.work;
     return (
       <div id="workExperience" className="gray">
         <h2>Work Experience</h2>
@@ -19,5 +19,9 @@ class WorkExperience extends Component {
     );
   }
 }
+
+WorkExperience.propTypes = {
+  work: PropTypes.object.isRequired
+};
 
 export default WorkExperience;

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Data from "../data";
+import PropTypes from "prop-types";
 
 class Education extends Component {
   render() {
-    var education = Data.education;
+    var education = this.props.education;
     return (
       <div id="education" className="gray">
         <h2>Education</h2>
@@ -19,5 +19,9 @@ class Education extends Component {
     );
   }
 }
+
+Education.proptypes = {
+  education: PropTypes.object.isRequired
+};
 
 export default Education;

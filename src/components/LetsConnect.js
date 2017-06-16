@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Data from "../data";
+import PropTypes from "prop-types";
 
 class LetsConnect extends Component {
   render() {
-    var contacts = Data.bio.contacts;
+    var contacts = this.props.contacts;
     return (
       <div id="lets-connect" className="dark-gray">
         <h2 className="orange center-text">Let's Connect</h2>
@@ -29,5 +29,9 @@ class LetsConnect extends Component {
     );
   }
 }
+
+LetsConnect.proptypes = {
+  contacts: PropTypes.object.isRequired
+};
 
 export default LetsConnect;
