@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./WorkExperience.css";
 import PropTypes from "prop-types";
 
 class WorkExperience extends Component {
