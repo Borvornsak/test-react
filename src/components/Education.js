@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Education = ({ education }) =>
+const Education = ({ schools }) =>
   <div id="education" className="gray">
     <h2>Education</h2>
-    {education.schools.map((school, index) =>
+    {schools.map((school, index) =>
       <div className="education-entry" key={index}>
         <a href="http://skooldio.com">{school.name} -- {school.degree}</a>
         <div className="date-text">{school.dates}</div>
@@ -17,7 +17,16 @@ const Education = ({ education }) =>
   </div>;
 
 Education.propTypes = {
-  education: PropTypes.object.isRequired
+  schools: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      location: PropTypes.string,
+      degree: PropTypes.string,
+      dates: PropTypes.string,
+      url: PropTypes.string,
+      majors: PropTypes.arrayOf(PropTypes.string)
+    })
+  ).isRequired
 };
 
 export default Education;

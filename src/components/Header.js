@@ -20,7 +20,14 @@ const Header = ({ bio }) =>
   </div>;
 
 Header.propTypes = {
-  bio: PropTypes.object.isRequired
+  bio: PropTypes.shape({
+    name: PropTypes.string,
+    role: PropTypes.string,
+    welcomeMessage: PropTypes.string,
+    biopic: PropTypes.string,
+    contacts: PropTypes.objectOf(PropTypes.string),
+    skills: PropTypes.arrayOf(PropTypes.string)
+  }).isRequired
 };
 
 export default Header;

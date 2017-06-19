@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const WorkExperience = ({ work }) =>
+const WorkExperience = ({ jobs }) =>
   <div id="workExperience" className="gray">
     <h2>Work Experience</h2>
-    {work.jobs.map((job, index) =>
+    {jobs.map((job, index) =>
       <div className="work-entry" key={index}>
         <a href="http://skooldio.com">{job.employer} - {job.title}</a>
         <div className="date-text">{job.dates}</div>
@@ -15,7 +15,14 @@ const WorkExperience = ({ work }) =>
   </div>;
 
 WorkExperience.propTypes = {
-  work: PropTypes.object.isRequired
+  jobs: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      dates: PropTypes.string,
+      description: PropTypes.string,
+      images: PropTypes.arrayOf(PropTypes.string)
+    })
+  ).isRequired
 };
 
 export default WorkExperience;

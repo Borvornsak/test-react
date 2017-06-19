@@ -18,9 +18,9 @@ class App extends Component {
     return (
       <div id="main">
         <Header bio={data.bio} />
-        <WorkExperience work={data.work} />
-        <Projects projects={data.projects} />
-        <Education education={data.education} />
+        <WorkExperience jobs={data.work.jobs} />
+        <Projects projects={data.projects.projects} />
+        <Education schools={data.education.schools} />
         <LetsConnect contacts={data.bio.contacts} />
       </div>
     );

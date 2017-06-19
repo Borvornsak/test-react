@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Projects = ({ projects }) =>
   <div id="projects">
     <h2>Projects</h2>
-    {projects.projects.map((project, index) =>
+    {projects.map((project, index) =>
       <div className="project-entry" key={index}>
         <a href="http://skooldio.com">{project.title}</a>
         <div className="date-text">{project.dates}</div>
@@ -17,7 +17,14 @@ const Projects = ({ projects }) =>
   </div>;
 
 Projects.propTyes = {
-  projects: PropTypes.object.isRequired
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      dates: PropTypes.string,
+      description: PropTypes.string,
+      images: PropTypes.arrayOf(PropTypes.string)
+    }).isRequired
+  )
 };
 
 export default Projects;
