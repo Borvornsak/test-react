@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./LetsConnect.css";
 import PropTypes from "prop-types";
+import "./LetsConnect.css";
 
 class LetsConnect extends Component {
   render() {

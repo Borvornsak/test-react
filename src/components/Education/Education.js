@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./Education.css";
 import PropTypes from "prop-types";
+import "./Education.css";
 
 class Education extends Component {
   render() {

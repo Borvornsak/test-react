@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./Header.css";
-import TopContacts from "../TopContacts/TopContacts";
 import PropTypes from "prop-types";
+import TopContacts from "../TopContacts/TopContacts";
+import "./Header.css";
 
 class Header extends Component {
   render() {
