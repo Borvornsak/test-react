@@ -9,14 +9,19 @@ import LetsConnect from "./components/LetsConnect";
 import Data from "./data.js";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: Data };
+  }
   render() {
+    const data = this.state;
     return (
       <div id="main">
-        <Header bio={Data.bio} />
-        <WorkExperience work={Data.work} />
-        <Projects projects={Data.projects} />
-        <Education education={Data.education} />
-        <LetsConnect contacts={Data.bio.contacts} />
+        <Header bio={data.bio} />
+        <WorkExperience work={data.work} />
+        <Projects projects={data.projects} />
+        <Education education={data.education} />
+        <LetsConnect contacts={data.bio.contacts} />
       </div>
     );
   }
