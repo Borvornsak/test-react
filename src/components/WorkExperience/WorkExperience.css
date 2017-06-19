@@ -17,3 +17,8 @@
   line-height: 16px;
   float: right;
 }
+
+#workExperience {
+  padding-bottom: 10px;
+  clear: both;
+}

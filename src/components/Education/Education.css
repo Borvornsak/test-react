@@ -17,3 +17,8 @@
   line-height: 16px;
   float: right;
 }
+
+#education {
+  padding-bottom: 10px;
+  clear: both;
+}
