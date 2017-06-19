@@ -11,7 +11,7 @@
 
 #skills-h3 {
   color: #f5ae23;
-  /*display: none;*/
+  display: none;
 }
 
 #header {
@@ -33,5 +33,23 @@
   float: left;
   padding: 10px;
   width: 200px;
-  /*display: none;*/
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .biopic {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  #skills-h3 .biopic {
+    display: block;
+  }
 }
