@@ -14,7 +14,7 @@ class App extends Component {
     this.state = { data: Data };
   }
   render() {
-    const data = this.state;
+    const { data } = this.state;
     return (
       <div id="main">
         <Header bio={data.bio} />
@@ -27,7 +27,4 @@ class App extends Component {
   }
 }
 
-// App.PropsType = {
-//   bio: React.PropTypes.object
-// };
 export default App;
