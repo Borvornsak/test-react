@@ -13,7 +13,7 @@ class Header extends Component {
         <TopContacts contacts={bio.contacts} />
         <img src={bio.biopic} className="biopic" alt="bioPic" />
         <span className="welcome-message">{bio.welcomeMessage}</span>
-        <h3 id="skills-h3">Skills at a Glance:</h3>
+        <h3 id="skills-header">Skills at a Glance:</h3>
         <ul id="skills" className="flex-column">
           {bio.skills.map(skill =>
             <li className="flex-item">
